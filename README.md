@@ -15,7 +15,7 @@ npm run preview
 ```bash
 git checkout --orphan gh-pages
 git reset --hard
-git commit --allow-empty -m "chore: init gh-pages branch"
+git commit --allow-empty -m "chore: init gh-pages branch" # 用空提交初始化孤儿分支
 git checkout -
 ```
 
