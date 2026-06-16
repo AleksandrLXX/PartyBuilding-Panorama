@@ -1,4 +1,4 @@
-const productionUrl = '/'
+const productionUrl = '/PartyBuilding-Panorama/'
 const developmentUrl = '/'
 
 const links = process.env.NODE_ENV === 'production' ? productionUrl : developmentUrl

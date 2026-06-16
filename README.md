@@ -1,5 +1,26 @@
-# Vue 3 + Vite
+# PartyBuilding Panorama
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 本地开发与预览
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+```bash
+npm install
+npm run dev
+npm run preview
+```
+
+## gh-pages 发布
+
+1. 首次创建 `gh-pages` 分支（只需执行一次）：
+
+```bash
+git checkout --orphan gh-pages
+git reset --hard
+git commit --allow-empty -m "chore: init gh-pages branch" # 用空提交初始化孤儿分支
+git checkout -
+```
+
+2. 发布到 `gh-pages` 分支：
+
+```bash
+npm run deploy
+```
