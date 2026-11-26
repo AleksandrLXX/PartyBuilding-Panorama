@@ -2,15 +2,27 @@
 
 党建大屏项目，采用“设计驱动 + 数据契约驱动 + AI 协作驱动”的研发方式。
 
-## 1. 本地开发与预览
+## 1. 已实现页面
+
+- 首页：核心指标、组织生活趋势、武汉片区组织力量示意。
+- 组织建设：演示单位结构、基层组织架构、党员年龄/岗位结构。
+- 党建工作：基于 `data/raw/dangjiangongzuo.xlsx` 提取的组织、党员、年龄、岗位及支部数据，并标记源表差异。
+- 先进案例、群团：已加入五模块导航与轮播，当前为待接入占位页。
+
+组织建设与首页中的片区/趋势数据是演示样例。正式部署前请根据 [数据字典](docs/data/data-dictionary.md) 替换并确认业务口径。
+
+## 2. 本地开发与预览
 
 ```bash
-npm install
-npm run dev
-npm run preview
+pnpm install
+pnpm dev
+pnpm build
+pnpm preview
 ```
 
-## 2. 发布到 GitHub Pages
+维护 `data/raw/*.csv` 后执行 `pnpm sync:data` 发布到 `public/data`；构建会自动同步。切换为后端 API 的步骤与响应契约见 [本地运行说明](docs/usage/local-run.md) 和 [数据字典](docs/data/data-dictionary.md)。
+
+## 3. 发布到 GitHub Pages
 
 1. 首次创建 gh-pages 分支（只需执行一次）
 
@@ -27,7 +39,7 @@ git checkout -
 npm run deploy
 ```
 
-## 3. 工作目录与用途
+## 4. 工作目录与用途
 
 ### 3.1 目录总览
 
@@ -91,7 +103,7 @@ CSV 原始文件放 data/raw；处理结果放 data/processed；前端演示数�
 5. 使用说明
 放 docs/usage 下，按本地运行、发布部署、运维操作拆分文档
 
-## 4. 设计到交付工作流（AI 深度融合）
+## 5. 设计到交付工作流（AI 深度融合）
 
 ### 阶段 A：需求与资产入库
 
@@ -124,7 +136,7 @@ CSV 原始文件放 data/raw；处理结果放 data/processed；前端演示数�
 2. 执行 npm run deploy
 3. 发布后记录预览地址与回滚版本
 
-## 5. 版本管理规范
+## 6. 版本管理规范
 
 ### 5.1 分支策略
 
@@ -157,7 +169,7 @@ CSV 原始文件放 data/raw；处理结果放 data/processed；前端演示数�
 4. E2E 冒烟通过
 5. 文档更新齐全（design-brief 与 data 口径）
 
-## 6. 推荐协作节奏
+## 7. 推荐协作节奏
 
 1. 每个迭代先更新 design 与 data，再开开发任务
 2. 每个功能分支至少完成一条完整竖切并附测试

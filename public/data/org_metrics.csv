@@ -1,0 +1,5 @@
+id,label,value,unit,caption
+org_units,组织单位,8,家,演示结构样例
+party_branches,基层党支部,86,个,演示结构样例
+party_members,党员总数,1970,人,演示结构样例
+full_coverage,组织覆盖率,100,%,演示结构样例

@@ -1,0 +1,5 @@
+id,label,value,unit,caption
+org_units,纳入统计单位,10,家,源表系统单位总数
+party_committees,党委,10,个,源表系统单位总数
+party_branches,党支部,125,个,源表系统单位总数
+party_members,党员,3270,人,源表系统单位总数
